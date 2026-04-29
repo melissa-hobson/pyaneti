@@ -135,9 +135,9 @@ for k,p in enumerate(plabels[:nplanets]):
         fdata  = compute_lc_model_single_band(local_time,df_medians,p,band=bands[i],n_cad=n_cad[i],t_cad=t_cad[i])
         #other samples
         #compute random samples
-        fsamples = []
-        for j in range(n_samples):
-            fsamples.append(compute_lc_model_single_band(xmodel,df_samples.iloc[j],p,band=bands[i],n_cad=n_cad[i],t_cad=t_cad[i]))
+        #fsamples = []
+        #for j in range(n_samples):
+        #    fsamples.append(compute_lc_model_single_band(xmodel,df_samples.iloc[j],p,band=bands[i],n_cad=n_cad[i],t_cad=t_cad[i]))
         xmodel -= df_medians[f't0{p}']
         pmodel = xmodel*24
 
@@ -156,8 +156,8 @@ for k,p in enumerate(plabels[:nplanets]):
         pb, lfb, efb = bin_data(phase[indices],local_flux[indices],local_errs[indices],tbin)
         ax0.errorbar(pb,lfb-i*1.5*delta_y,efb,mfc='w',label=bands[i],color=tr_colors[i],zorder=6,fmt=mark_tr[i])
         ax0.plot(pmodel,fmodel-i*1.5*delta_y,zorder=5,color=tr_colors[i])
-        for j in range(n_samples):
-            ax0.plot(pmodel,fsamples[j]-i*1.5*delta_y,alpha=0.05,lw=0.5,zorder=4,color=tr_colors[i])
+        #for j in range(n_samples):
+        #    ax0.plot(pmodel,fsamples[j]-i*1.5*delta_y,alpha=0.05,lw=0.5,zorder=4,color=tr_colors[i])
 
         #Residuals
         pb, lfb, efb = bin_data(phase[indices],lc_residuals,local_errs[indices],tbin)

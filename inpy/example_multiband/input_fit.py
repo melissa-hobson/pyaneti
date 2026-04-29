@@ -46,6 +46,7 @@ method = 'mcmc'
 
 plot_binned_data = True
 
+is_clustering = True
 
 #What units do you prefer for your planet parameters?
 # earth, jupiter or solar
@@ -92,8 +93,8 @@ max_q1 = [1,1]
 min_q2 = [0,0]
 max_q2 = [1,1]
 
-#We do not fit for a jitter term in this example
-is_jitter_tr = False
+#We fit for a jitter term for each band
+is_jitter_tr = True
 
 #Prior ranges for a parameter A
 #if 'f' is selected for the parameter A, A is fixed to the one given by min_A
