@@ -93,6 +93,7 @@ nchains = 100
 # - 'mcmc' -> run the MCMC fit
 # - 'plot'  -> create plots assuming a previous run exists
 method = 'mcmc'
+#method = 'plot'
 
 # Plotting / run behaviour flags
 is_plot_correlations = True   # produce correlation plots
@@ -104,17 +105,17 @@ is_plot_posteriors = True     # produce posterior distributions
 # IV. Stellar parameters (used by pyaneti for gaussian priors / derived params)
 # -------------------------------------------------------------------------
 # Stellar mass and radius priors (mean, sigma). Values from Barragan et al., 2026
-mstar_mean  = 0.79
-mstar_sigma = 0.01
-rstar_mean  = 0.71
-rstar_sigma = 0.01
+mstar_mean  = 0.93
+mstar_sigma = 0.04
+rstar_mean  = 0.85
+rstar_sigma = 0.03
 
 # Stellar effective temperature (K) and uncertainty.
-tstar_mean  = 5033.
-tstar_sigma = 50.
+tstar_mean  = 5490
+tstar_sigma = 115
 
 # J-band magnitude (used to compute TSM following Kempton+2018).
-mag_j = 8.968
+mag_j = 9.636
 
 # Labels for plotting y-axis on spectroscopic panels (example strings).
 rv_ylabel = ['RV (m/s)', 'NGTS (ppt)']
