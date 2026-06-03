@@ -251,7 +251,7 @@ else:
     plt.savefig(fname[:-3]+'png', format='png', bbox_inches='tight', dpi=300)
     plt.close()
 
-    #exec(open('src/gprv_res.py').read())
+    exec(open('src/mgic_rv.py').read())
 
 #--------------------------------------------------------------------------------
 #                   Phase folded RV plots
